@@ -59,7 +59,15 @@ arch_install_work() {
 }
 
 stow_dotfiles() {
-    echo "Using store to create dotfiles"
+    echo "Using stow to create dotfiles"
+    rm -rf ~/.profile
+    stow --target ~/ zsh
+    case "$MODE" in
+        home)
+            ;;
+        work)
+            ;;
+    esac
 }
 
 install_packages
