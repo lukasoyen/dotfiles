@@ -1,3 +1,6 @@
 [submodule "bundles/antigen"]
 	path = bundles/antigen
 	url = https://github.com/zsh-users/antigen.git
+[submodule "bundles/spacevim"]
+	path = bundles/spacevim
+	url = https://github.com/SpaceVim/SpaceVim.git
