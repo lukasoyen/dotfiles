@@ -58,19 +58,4 @@ arch_install_work() {
     sudo pacman -S --needed task timew
 }
 
-stow_dotfiles() {
-    echo "Using stow to create dotfiles"
-    rm -rf ~/.profile ~/.i3 ~/.vim ~/.config/nvim
-    stow --target ~/ zsh i3 vim intellij
-    case "$MODE" in
-        home)
-            ;;
-        work)
-            ;;
-    esac
-}
-
 install_packages
-stow_dotfiles
-echo "All done"
-
