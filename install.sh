@@ -27,7 +27,7 @@ arch_cleanup_base() {
 arch_install_base() {
     echo "Installing base system"
     sudo pacman -S --needed --noconfirm \
-        base-devel \
+        base-devel manjaro-pulse pavucontrol \
         ntfs-3g adobe-source-code-pro-fonts xf86-input-synaptics \
         zsh-completions stow pass feh \
         ripgrep fzf z neovim moreutils \
