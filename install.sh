@@ -26,7 +26,7 @@ arch_cleanup_base() {
 
 arch_install_base() {
     echo "Installing base system"
-    sudo pacman -S --needed \
+    sudo pacman -S --needed --noconfirm \
         ntfs-3g adobe-source-code-pro-fonts xf86-input-synaptics \
         zsh-completions stow pass feh \
         ripgrep fzf z neovim moreutils \
@@ -41,8 +41,16 @@ Server = https://repo.herecura.be/herecura/x86_64
 EOF
         sudo pacman -Sy
     fi
-    sudo pacman -S --needed \
+    sudo pacman -S --needed --noconfirm \
         vivaldi-snapshot vivaldi-snapshot-ffmpeg-codecs
+
+    echo ".. installing packages from aur"
+    gpg --recv-keys EB4F9E5A60D32232BB52150C12C87A28FEAC6B20 # browserpass
+    for package in packages/*/; do
+        pushd "$package"
+        makepkg -si
+        popd
+    done
 
     echo ".. setting zsh as shell"
     sudo chsh --shell "$(which zsh)" "$(whoami)"
@@ -50,7 +58,8 @@ EOF
 
 arch_install_home() {
     echo "Installing packages for the home install"
-    sudo pacman -S --needed ledger
+    sudo pacman -S --needed --noconfirm \
+        ledger
 }
 
 arch_install_work() {
