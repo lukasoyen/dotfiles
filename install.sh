@@ -29,8 +29,8 @@ arch_install_base() {
     sudo pacman -S --needed \
         ntfs-3g adobe-source-code-pro-fonts xf86-input-synaptics \
         zsh-completions stow pass feh \
-        ripgrep fzf z neovim \
-        arandr unclutter \
+        ripgrep fzf z neovim moreutils \
+        arandr unclutter zathura-pdf-mupdf \
         pycharm-community-edition
 
     echo ".. installing vivaldi"
