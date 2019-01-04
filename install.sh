@@ -60,8 +60,8 @@ arch_install_work() {
 
 stow_dotfiles() {
     echo "Using stow to create dotfiles"
-    rm -rf ~/.profile
-    stow --target ~/ zsh
+    rm -rf ~/.profile ~/.i3
+    stow --target ~/ zsh i3
     case "$MODE" in
         home)
             ;;
