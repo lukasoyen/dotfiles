@@ -61,7 +61,7 @@ arch_install_work() {
 stow_dotfiles() {
     echo "Using stow to create dotfiles"
     rm -rf ~/.profile ~/.i3
-    stow --target ~/ zsh i3
+    stow --target ~/ zsh i3 intellij
     case "$MODE" in
         home)
             ;;
