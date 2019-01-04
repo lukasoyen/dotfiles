@@ -27,6 +27,7 @@ arch_cleanup_base() {
 arch_install_base() {
     echo "Installing base system"
     sudo pacman -S --needed --noconfirm \
+        base-devel \
         ntfs-3g adobe-source-code-pro-fonts xf86-input-synaptics \
         zsh-completions stow pass feh \
         ripgrep fzf z neovim moreutils \
@@ -48,7 +49,7 @@ EOF
     gpg --recv-keys EB4F9E5A60D32232BB52150C12C87A28FEAC6B20 # browserpass
     for package in packages/*/; do
         pushd "$package"
-        makepkg -si
+        makepkg --clean --install --syncdeps --noconfirm
         popd
     done
 

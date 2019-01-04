@@ -4,3 +4,6 @@
 [submodule "bundles/spacevim"]
 	path = bundles/spacevim
 	url = https://github.com/SpaceVim/SpaceVim.git
+[submodule "packages/browserpass"]
+	path = packages/browserpass
+	url = https://aur.archlinux.org/browserpass.git
