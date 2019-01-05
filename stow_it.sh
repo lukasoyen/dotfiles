@@ -7,11 +7,11 @@ set -e
 stow_dotfiles() {
     echo "Using stow to create dotfiles"
     rm -rf ~/.profile ~/.i3 ~/.vim ~/.config/nvim
-    stow --target ~/ zsh i3 spacevim intellij
+    stow --target ~/ zsh i3 kitty spacevim intellij
     case "$MODE" in
         home) ;;
         work) ;;
     esac
 }
 
-stow_it
+stow_dotfiles
