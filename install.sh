@@ -5,18 +5,12 @@ MODE="${1:-base}"
 set -e
 
 install_packages() {
-  if [ $(lsb_release --id --short) = "ManjaroLinux" ]; then
-      arch_cleanup_base
-      arch_install_base
-      case "$MODE" in
-          home)
-              arch_install_home
-              ;;
-          work)
-              arch_install_work
-              ;;
-      esac
-  fi
+    arch_cleanup_base
+    arch_install_base
+    case "$MODE" in
+        home) arch_install_home ;;
+        work) arch_install_work ;;
+    esac
 }
 
 arch_cleanup_base() {
@@ -27,11 +21,24 @@ arch_cleanup_base() {
 arch_install_base() {
     echo "Installing base system"
     sudo pacman -S --needed --noconfirm \
-        base-devel manjaro-pulse pavucontrol \
-        ntfs-3g adobe-source-code-pro-fonts xf86-input-synaptics \
-        zsh-completions stow pass feh \
-        ripgrep fzf z neovim moreutils \
-        arandr unclutter zathura-pdf-mupdf \
+        base-devel \
+        manjaro-pulse \
+        pavucontrol \
+        ntfs-3g \
+        adobe-source-code-pro-fonts\
+        xf86-input-synaptics \
+        zsh-completions \
+        stow \
+        pass \
+        feh \
+        ripgrep \
+        fzf \
+        z \
+        neovim \
+        moreutils \
+        arandr \
+        unclutter \
+        zathura-pdf-mupdf \
         pycharm-community-edition
 
     echo ".. installing vivaldi"
@@ -43,7 +50,8 @@ EOF
         sudo pacman -Sy
     fi
     sudo pacman -S --needed --noconfirm \
-        vivaldi-snapshot vivaldi-snapshot-ffmpeg-codecs
+        vivaldi-snapshot \
+        vivaldi-snapshot-ffmpeg-codecs
 
     echo ".. installing packages from aur"
     gpg --recv-keys EB4F9E5A60D32232BB52150C12C87A28FEAC6B20 # browserpass
@@ -65,7 +73,9 @@ arch_install_home() {
 
 arch_install_work() {
     echo "Installing packages for the work install"
-    sudo pacman -S --needed task timew
+    sudo pacman -S --needed \
+        task \
+        timew
 }
 
 install_packages
