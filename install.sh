@@ -35,6 +35,7 @@ arch_install_base() {
         feh \
         ripgrep \
         fzf \
+        rofi \
         z \
         neovim \
         moreutils \
