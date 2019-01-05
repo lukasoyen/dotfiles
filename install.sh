@@ -15,7 +15,8 @@ install_packages() {
 
 arch_cleanup_base() {
     echo "Removing unused software from base system"
-    sudo pacman -Rsu palemoon-bin vim || true
+    sudo pacman -Rsu --noconfirm vim || true
+    sudo pacman -Rsu --noconfirm palemoon-bin || true
 }
 
 arch_install_base() {
