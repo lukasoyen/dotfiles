@@ -28,6 +28,7 @@ arch_install_base() {
         ntfs-3g \
         adobe-source-code-pro-fonts\
         xf86-input-synaptics \
+        kitty \
         zsh-completions \
         stow \
         pass \
