@@ -1,5 +1,6 @@
-source ~/.antigen.zsh
 
+export ADOTDIR=~/.cache/antigen
+source ~/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle history-substring-search
