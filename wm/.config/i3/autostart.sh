@@ -10,18 +10,16 @@ compton &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 pulseaudio &
 
-pa-applet &
 nm-applet &
 xfce4-power-manager &
 pamac-tray &
 clipit &
-sbxkb &
 
 fix_xcursor &
 unclutter &
 xautolock -time 10 -locker blurlock &
 
-if [-d ~/.autostart.d/*.sh ]; then
+if [ -d ~/.autostart.d/*.sh ]; then
   for start_snipplet in ~/.autostart.d/*.sh ; do
       sh $start_snipplet &
   done
