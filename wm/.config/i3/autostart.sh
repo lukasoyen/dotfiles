@@ -4,7 +4,7 @@ setxkbmap de neo &
 synclient TouchpadOff=1 &
 feh --bg-scale --no-fehbg ~/.config/i3/background.png &
 
-start_conky_maia &
+#start_conky_maia &
 compton &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
