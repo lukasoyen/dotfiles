@@ -29,3 +29,6 @@ name = 'fzf'
 
 [[layers]]
 name = 'lang#python'
+
+[[layers]]
+name = 'ledger'
