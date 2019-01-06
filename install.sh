@@ -61,6 +61,7 @@ EOF
     for package in packages/*/; do
         pushd "$package"
         makepkg --clean --install --syncdeps --noconfirm
+        git clean -fxd
         popd
     done
 
