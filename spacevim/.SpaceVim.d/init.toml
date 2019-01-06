@@ -19,4 +19,13 @@ auto-completion-tab-key-behavior = "smart"
 name = 'colorscheme'
 
 [[layers]]
+name = 'default'
+
+[[layers]]
+name = 'edit'
+
+[[layers]]
+name = 'fzf'
+
+[[layers]]
 name = 'lang#python'
