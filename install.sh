@@ -40,6 +40,7 @@ arch_install_base() {
         neovim \
         moreutils \
         arandr \
+        restic \
         unclutter \
         zathura-pdf-mupdf \
         pycharm-community-edition
