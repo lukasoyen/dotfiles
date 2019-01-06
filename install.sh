@@ -72,6 +72,7 @@ EOF
 arch_install_home() {
     echo "Installing packages for the home install"
     sudo pacman -S --needed --noconfirm \
+        emacs \
         ledger
 }
 

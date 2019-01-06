@@ -7,3 +7,6 @@
 [submodule "packages/browserpass"]
 	path = packages/browserpass
 	url = https://aur.archlinux.org/browserpass.git
+[submodule "bundles/spacemacs"]
+	path = bundles/spacemacs
+	url = https://github.com/syl20bnr/spacemacs

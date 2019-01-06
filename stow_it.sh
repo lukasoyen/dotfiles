@@ -9,7 +9,7 @@ stow_dotfiles() {
     rm -rf ~/.profile ~/.bash_* ~/.bashrc ~/.i3 ~/.vim ~/.config/nvim
     stow --target ~/ zsh spacevim xorg wm kitty intellij
     case "$MODE" in
-        home) stow --target ~/ spacevim_home ;;
+        home) stow --target ~/ spacemacs ;;
         work) ;;
     esac
 }
