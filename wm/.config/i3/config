@@ -65,62 +65,71 @@ bindsym $mod+p focus parent
 # focus the child container
 bindsym $mod+b focus child
 
+set $ws_org "1:org"
+set $ws_code "2:code"
+set $ws_terminal "3:terminal"
+set $ws_misc "4:misc"
+set $ws_browser "5:browser"
+set $ws_mail "6:mail"
+set $ws_stuff "7:stuff"
+set $ws_chat "8:chat"
+
 # switch to workspace
-bindsym $go+u workspace org
-bindsym $go+i workspace code
-bindsym $go+a workspace terminal
-bindsym $go+e workspace misc
-bindsym $go+n workspace browser
-bindsym $go+r workspace mail
-bindsym $go+t workspace stuff
-bindsym $go+d workspace chat
+bindsym $go+u workspace $ws_org
+bindsym $go+i workspace $ws_code
+bindsym $go+a workspace $ws_terminal
+bindsym $go+e workspace $ws_misc
+bindsym $go+n workspace $ws_browser
+bindsym $go+r workspace $ws_mail
+bindsym $go+t workspace $ws_stuff
+bindsym $go+d workspace $ws_chat
 
 # move focused container to workspace
-bindsym $move+Shift+u move container to workspace org
-bindsym $move+Shift+i move container to workspace code
-bindsym $move+Shift+a move container to workspace terminal
-bindsym $move+Shift+e move container to workspace misc
-bindsym $move+Shift+n move container to workspace browser
-bindsym $move+Shift+r move container to workspace mail
-bindsym $move+Shift+t move container to workspace stuff
-bindsym $move+Shift+d move container to workspace chat
+bindsym $move+Shift+u move container to workspace $ws_org
+bindsym $move+Shift+i move container to workspace $ws_code
+bindsym $move+Shift+a move container to workspace $ws_terminal
+bindsym $move+Shift+e move container to workspace $ws_misc
+bindsym $move+Shift+n move container to workspace $ws_browser
+bindsym $move+Shift+r move container to workspace $ws_mail
+bindsym $move+Shift+t move container to workspace $ws_stuff
+bindsym $move+Shift+d move container to workspace $ws_chat
 
 # move focused container to workspace
-bindsym $move+u move container to workspace org; workspace org
-bindsym $move+i move container to workspace code; workspace code
-bindsym $move+a move container to workspace terminal; workspace terminal
-bindsym $move+e move container to workspace misc; workspace misc
-bindsym $move+n move container to workspace browser; workspace browser
-bindsym $move+r move container to workspace mail; workspace mail
-bindsym $move+t move container to workspace stuff; workspace stuff
-bindsym $move+d move container to workspace chat; workspace chat
+bindsym $move+u move container to workspace $ws_org; workspace $ws_org
+bindsym $move+i move container to workspace $ws_code; workspace $ws_code
+bindsym $move+a move container to workspace $ws_terminal; workspace $ws_terminal
+bindsym $move+e move container to workspace $ws_misc; workspace $ws_misc
+bindsym $move+n move container to workspace $ws_browser; workspace $ws_browser
+bindsym $move+r move container to workspace $ws_mail; workspace $ws_mail
+bindsym $move+t move container to workspace $ws_stuff; workspace $ws_stuff
+bindsym $move+d move container to workspace $ws_chat; workspace $ws_chat
 
-#workspace org output DP-2-1
-#workspace code output DP-2-1
-#workspace terminal output DP-2-1
-#workspace misc output DP-2-1
-#workspace browser output DP-2-2
-#workspace mail output DP-2-2
-#workspace stuff output DP-2-2
-#workspace chat output eDP-1
+#workspace $ws_org output DP-2-1
+#workspace $ws_code output DP-2-1
+#workspace $ws_terminal output DP-2-1
+#workspace $ws_misc output DP-2-1
+#workspace $ws_browser output DP-2-2
+#workspace $ws_mail output DP-2-2
+#workspace $ws_stuff output DP-2-2
+#workspace $ws_chat output eDP-1
 
 # Open specific applications on workspaces
-for_window [class="Firefox"] move container to workspace browser
-for_window [class="Chromium"] move container to workspace browser
-for_window [class="Vivaldi"] move container to workspace browser
+for_window [class="Firefox"] move container to workspace $ws_browser
+for_window [class="Chromium"] move container to workspace $ws_browser
+for_window [class="Vivaldi"] move container to workspace $ws_browser
 
-for_window [class="Emacs"] move container to workspace org
-for_window [class="jetbrains-*"] move container to workspace code
+for_window [class="Emacs"] move container to workspace $ws_org
+for_window [class="jetbrains-*"] move container to workspace $ws_code
 
-for_window [class="Pidgin"] move container to workspace chat
-for_window [class="Slack"] move container to workspace chat
-for_window [class="Thunderbird"] move container to workspace mail
-for_window [class="Skype"] move container to workspace stuff
+for_window [class="Pidgin"] move container to workspace $ws_chat
+for_window [class="Slack"] move container to workspace $ws_chat
+for_window [class="Thunderbird"] move container to workspace $ws_mail
+for_window [class="Skype"] move container to workspace $ws_stuff
 
-for_window [class="^rdesktop"] move container to workspace misc; floating disable
+for_window [class="^rdesktop"] move container to workspace $ws_misc; floating disable
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
 
-for_window [class="zoom"] move container to workspace stuff
+for_window [class="zoom"] move container to workspace $ws_stuff
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
