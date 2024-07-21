@@ -1,4 +1,0 @@
-rofi.modi:                           window,drun
-rofi.font:                           Noto 10.5
-rofi.terminal:                       kitty
-rofi.theme:                          lb
