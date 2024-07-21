@@ -8,4 +8,6 @@ tmux
 tree
 neovim
 ripgrep
+zoxide
+fzf
 moreutils
