@@ -1,0 +1,5 @@
+[user]
+	email = lummax@mailbox.org
+	name = lummax
+[init]
+	defaultBranch = main

@@ -1,12 +1,3 @@
-[submodule "bundles/antigen"]
-	path = bundles/antigen
-	url = https://github.com/zsh-users/antigen.git
-[submodule "bundles/spacevim"]
-	path = bundles/spacevim
-	url = https://github.com/SpaceVim/SpaceVim.git
-[submodule "packages/browserpass"]
-	path = packages/browserpass
-	url = https://aur.archlinux.org/browserpass.git
-[submodule "bundles/spacemacs"]
-	path = bundles/spacemacs
-	url = https://github.com/syl20bnr/spacemacs
+[submodule "bundles/tpm"]
+	path = bundles/tpm
+	url = https://github.com/tmux-plugins/tpm
