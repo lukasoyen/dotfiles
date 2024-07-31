@@ -3,11 +3,20 @@
     flakey-profile.url = "github:lf-/flakey-profile";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile }:
+  outputs = { self, nixpkgs, flake-utils, flakey-profile, fenix }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; };
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ fenix.overlays.default ];
+        };
+        fx = fenix.packages.${system};
       in {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
         #
@@ -32,12 +41,15 @@
             stow
             tmux
             tree
+
             neovim
             ripgrep
             zoxide
             fzf
             moreutils
             nixfmt
+
+            (fx.stable.withComponents [ "cargo" "clippy" "rustc" "rustfmt" ])
           ];
         };
       });
