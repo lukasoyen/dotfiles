@@ -1,13 +1,3 @@
 git
 curl
 build-essential
-
-fish
-stow
-tmux
-tree
-neovim
-ripgrep
-zoxide
-fzf
-moreutils
