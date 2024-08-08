@@ -49,6 +49,8 @@
             moreutils
             nixfmt
 
+            brave
+
             (fx.stable.withComponents [ "cargo" "clippy" "rustc" "rustfmt" ])
           ];
         };
