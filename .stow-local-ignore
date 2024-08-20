@@ -7,3 +7,5 @@ flake.lock
 
 .git
 .gitmodules
+flake.lock
+flake.nix
