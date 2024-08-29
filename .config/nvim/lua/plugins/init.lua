@@ -24,4 +24,12 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+  {
+    "neovim/nvim-lspconfig",
+    lazy = false,
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig.ruff.setup({})
+    end,
+  },
 }
