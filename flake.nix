@@ -44,6 +44,7 @@
             moreutils
 
             neovim
+            bazelisk
 
             timewarrior
 
