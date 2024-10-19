@@ -47,6 +47,8 @@
             bazelisk
 
             timewarrior
+            tailscale
+            trayscale
 
             nix
             nixfmt
