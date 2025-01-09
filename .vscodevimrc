@@ -1,0 +1,44 @@
+" Redo
+nnoremap U <C-r>
+
+" to the end of the line
+nnoremap Y y$
+nnoremap C c$
+nnoremap D d$
+
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
+
+" Window operation
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>w- <C-W>s
+nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>wm workbench.action.joinAllGroups
+
+nnoremap <Leader>pf workbench.action.quickOpen
+nnoremap <Leader>fr workbench.action.quickOpen
+nnoremap <Leader>ff editor.action.quickFix
+nnoremap <Leader>fp workbench.action.openRecent
+
+nnoremap <Leader>/ workbench.action.findInFiles
+vnoremap <Leader>/ workbench.action.findInFiles
+nnoremap <Leader>* workbench.action.findInFiles
+
+nnoremap <Leader>cl editor.action.commentLine
+vnoremap <Leader>cl editor.action.commentLine
+
+nnoremap <Leader>gg editor.action.revealDefinition
+nnoremap <Leader>gr editor.action.goToReferences
+nnoremap <Leader>gb workbench.action.navigateBack
+nnoremap <Leader>gf workbench.action.navigateForward
+
+nnoremap <Leader>re editor.action.rename
+vnoremap <Leader>re editor.action.rename
+nnoremap <Leader>rr editor.action.refactor
+
+nnoremap <Leader>us editor.action.referenceSearch.trigger
+
+nnoremap <Leader>tw editor.action.toggleRenderWhitespace
+nnoremap <Leader>vb gitlens.toggleFileBlame
