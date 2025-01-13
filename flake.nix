@@ -42,9 +42,11 @@
             zoxide
             fzf
             moreutils
-            nixfmt
 
-            brave
+            timewarrior
+            direnv
+
+            nixfmt
 
           ];
         };
