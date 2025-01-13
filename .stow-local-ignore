@@ -1,5 +1,9 @@
 README.md
 packages.txt
 bundles
+
+flake.nix
+flake.lock
+
 .git
 .gitmodules
