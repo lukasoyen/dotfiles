@@ -34,21 +34,22 @@
             git
             curl
             stow
+
+            fzf
             tmux
             tree
-
-            neovim
-            ripgrep
+            direnv
             zoxide
-            fzf
+            ripgrep
             moreutils
 
+            neovim
+
             timewarrior
-            direnv
 
             nix
             nixfmt
-
+            cacert
           ];
         };
       });
