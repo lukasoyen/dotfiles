@@ -1,5 +1,34 @@
+[init]
+	defaultBranch = main
+
+[branch]
+	autosetupmerge = always
+
+[core]
+	autocrlf = input
+
+[color]
+	ui = auto
+
+[diff]
+	algorithm = patience
+
+[fetch]
+	prune = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[rerere]
+	enabled = true
+
 [user]
 	email = lummax@mailbox.org
 	name = lummax
-[init]
-	defaultBranch = main
