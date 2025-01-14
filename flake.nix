@@ -46,6 +46,7 @@
             timewarrior
             direnv
 
+            nix
             nixfmt
 
           ];
