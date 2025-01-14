@@ -3,31 +3,30 @@
 
 define holidays:
   de-DE:
-    2023_01_01 = Neujahr
-    2023_04_07 = Karfreitag
-    2023_04_09 = Ostern
-    2023_04_10 = Ostermontag
-    2023_05_01 = Erster Maifeiertag
-    2023_05_18 = Christi Himmelfahrt
-    2023_05_28 = Pfingstsonntag
-    2023_05_29 = Pfingstmontag
-    2023_10_03 = Tag der Deutschen Einheit
-    2023_10_31 = Reformationstag
-    2023_12_24 = Heilig Abend
-    2023_12_25 = Weihnachtstag
-    2023_12_26 = Zweiter Weihnachtstag
-    2023_12_31 = Silvester
+    2025_01_01 = Neujahr
+    2025_04_18 = Karfreitag
+    2025_04_20 = Ostern
+    2025_04_21 = Ostermontag
+    2025_05_01 = Erster Maifeiertag
+    2025_05_29 = Christi Himmelfahrt
+    2025_06_09 = Pfingstmontag
+    2025_10_03 = Tag der Deutschen Einheit
+    2025_10_31 = Reformationstag
+    2025_12_24 = Heilig Abend
+    2025_12_25 = Weihnachtstag
+    2025_12_26 = Zweiter Weihnachtstag
+    2025_12_31 = Silvester
 
-    2024_01_01 = Neujahr
-    2024_03_29 = Karfreitag
-    2024_04_09 = Ostern
-    2024_04_01 = Ostermontag
-    2024_05_01 = Erster Maifeiertag
-    2024_05_09 = Christi Himmelfahrt
-    2024_05_20 = Pfingstmontag
-    2024_10_03 = Tag der Deutschen Einheit
-    2024_10_31 = Reformationstag
-    2024_12_24 = Heilig Abend
-    2024_12_25 = Weihnachtstag
-    2024_12_26 = Zweiter Weihnachtstag
-    2024_12_31 = Silvester
+    2026_01_01 = Neujahr
+    2026_04_03 = Karfreitag
+    2026_04_05 = Ostern
+    2026_04_06 = Ostermontag
+    2026_05_01 = Erster Maifeiertag
+    2026_05_14 = Christi Himmelfahrt
+    2026_05_25 = Pfingstmontag
+    2026_10_03 = Tag der Deutschen Einheit
+    2026_10_31 = Reformationstag
+    2026_12_24 = Heilig Abend
+    2026_12_25 = Weihnachtstag
+    2026_12_26 = Zweiter Weihnachtstag
+    2026_12_31 = Silvester
