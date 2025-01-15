@@ -1,9 +1,6 @@
 [init]
 	defaultBranch = main
 
-[branch]
-	autosetupmerge = always
-
 [core]
 	autocrlf = input
 
@@ -19,9 +16,6 @@
 [pull]
 	rebase = true
 
-[push]
-	autoSetupRemote = true
-
 [rebase]
 	autosquash = true
 	autostash = true
@@ -32,3 +26,8 @@
 [user]
 	email = lummax@mailbox.org
 	name = lummax
+[branch]
+	autoSetupRebase = always
+	autoSetupMerge = always
+[push]
+	autoSetupRemote = true
