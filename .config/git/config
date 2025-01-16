@@ -31,3 +31,6 @@
 	autoSetupMerge = always
 [push]
 	autoSetupRemote = true
+	default = current
+[alias]
+	st = status
