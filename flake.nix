@@ -5,12 +5,11 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile, fenix }:
+  outputs = { self, nixpkgs, flake-utils, flakey-profile }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ fenix.overlays.default ];
         };
       in {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
