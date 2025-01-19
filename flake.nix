@@ -42,6 +42,7 @@
             ripgrep
             moreutils
 
+            gh
             neovim
             bazelisk
             zed-editor
