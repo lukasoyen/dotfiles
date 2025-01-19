@@ -44,6 +44,7 @@
 
             neovim
             bazelisk
+            zed-editor
 
             timewarrior
             tailscale
