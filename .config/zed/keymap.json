@@ -9,7 +9,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "space p f": "file_finder::Toggle",
+      "space t f": "tab_switcher::Toggle"
     }
   },
   {
