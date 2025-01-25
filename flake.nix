@@ -46,7 +46,6 @@
             gh
             neovim
             bazelisk
-            pre-commit
             zed-editor
             git-absorb
 

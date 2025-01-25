@@ -1,3 +1,4 @@
 git
 curl
 build-essential
+pre-commit
