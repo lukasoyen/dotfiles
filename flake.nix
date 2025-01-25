@@ -48,6 +48,7 @@
             bazelisk
             zed-editor
             git-absorb
+            commitizen
 
             timewarrior
             tailscale
