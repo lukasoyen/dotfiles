@@ -41,6 +41,7 @@
             zoxide
             ripgrep
             moreutils
+            hyperfine
 
             gh
             neovim
