@@ -34,3 +34,4 @@
 	default = current
 [alias]
 	st = status
+	fx = commit --fixup
