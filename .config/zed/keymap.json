@@ -16,7 +16,8 @@
   {
     "context": "Editor",
     "bindings": {
-      "space g g": "editor::GoToDefinition"
+      "space g g": "editor::GoToDefinition",
+      "space g a": "command_palette::Toggle"
     }
   },
   {

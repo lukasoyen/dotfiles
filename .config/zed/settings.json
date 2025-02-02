@@ -18,6 +18,7 @@
   "load_direnv": "shell_hook",
   "cursor_blink": false,
   "tab_bar": { "show": true },
+  "middle_click_paste": true,
   "theme": {
     "mode": "dark",
     "light": "One Light",
