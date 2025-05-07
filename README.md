@@ -12,10 +12,10 @@ git clone --recurse-submodules https://github.com/lummax/dotfiles.git && cd dotf
 ```
 
 ```
-sudo apt-get install $(cat packages.txt)
+sudo apt install git curl fish
 sh <(curl -L https://nixos.org/nix/install) --daemon
 nix run .#profile.switch
-chsh -s $(which fish)
 stow --target ~/ .
 fc-cache -fv
+chsh -s $(which fish)
 ```

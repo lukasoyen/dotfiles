@@ -46,7 +46,6 @@
             gh
             neovim
             bazelisk
-            zed-editor
             git-absorb
             bat
             commitizen
