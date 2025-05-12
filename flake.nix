@@ -33,6 +33,7 @@
             git
             curl
             stow
+            fish
 
             fzf
             tmux
