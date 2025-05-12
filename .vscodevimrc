@@ -31,6 +31,7 @@ vnoremap <Leader>cl editor.action.commentLine
 
 nnoremap <Leader>gg editor.action.revealDefinition
 nnoremap <Leader>gr editor.action.goToReferences
+nnoremap <Leader>ga workbench.action.showCommands
 nnoremap <Leader>gb workbench.action.navigateBack
 nnoremap <Leader>gf workbench.action.navigateForward
 
