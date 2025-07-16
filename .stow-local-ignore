@@ -1,6 +1,7 @@
 README.md
 packages.txt
 bundles
+macos
 
 flake.nix
 flake.lock

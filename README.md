@@ -34,4 +34,5 @@ curl -fsSL https://install.determinate.systems/nix | sh -s -- install --determin
 
 nix run .#profile.switch
 stow --target ~/ .
+stow --target ~/ macos
 ```
