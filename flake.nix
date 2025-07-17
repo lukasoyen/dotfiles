@@ -35,6 +35,9 @@
             stow
             fish
 
+            gnused
+            util-linux
+
             fzf
             tmux
             tree
