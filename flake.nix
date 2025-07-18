@@ -37,6 +37,8 @@
 
             gnused
             util-linux
+            python3.10
+            pre-commit
 
             fzf
             tmux
