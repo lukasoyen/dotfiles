@@ -38,8 +38,12 @@
 
             curl
             fish
-            git
             stow
+
+            gh
+            git
+            git-absorb
+            git-lfs
 
             direnv
             fzf
@@ -50,8 +54,6 @@
 
             bazelisk
             commitizen
-            gh
-            git-absorb
             hyperfine
             pre-commit
             timewarrior
