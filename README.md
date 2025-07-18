@@ -27,7 +27,7 @@ fc-cache -fv
 ### MacOS
 
 ```
-brew install fish
+brew install fish iterm2 koekeishiya/formulae/skhd
 echo "$(which fish)" | sudo tee -a /etc/shells
 chsh -s $(which fish)
 curl -fsSL https://install.determinate.systems/nix | sh -s -- install --determinate
