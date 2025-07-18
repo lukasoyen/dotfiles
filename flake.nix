@@ -30,34 +30,34 @@
           # Specifies things to pin in the flake registry and in NIX_PATH.
           pinned = { nixpkgs = toString nixpkgs; };
           paths = with pkgs; [
-            git
-            curl
-            stow
-            fish
-
-            gnused
-            util-linux
             coreutils
-            python3.10
-            pre-commit
-
-            fzf
-            tmux
+            gnused
             tree
-            direnv
-            zoxide
-            ripgrep
             moreutils
-            hyperfine
+            util-linux
 
-            gh
+            curl
+            fish
+            git
+            stow
+
+            direnv
+            fzf
             neovim
-            bazelisk
-            git-absorb
-            bat
-            commitizen
+            ripgrep
+            tmux
+            zoxide
 
+            bazelisk
+            commitizen
+            gh
+            git-absorb
+            hyperfine
+            pre-commit
             timewarrior
+
+            python3.10
+
             tailscale
             trayscale
 
