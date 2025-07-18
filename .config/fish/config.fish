@@ -1,7 +1,7 @@
 set -gx EDITOR nvim
 
-fish_add_path --path ~/.local/bin/
-fish_add_path --path ~/.nix-profile/bin/
+fish_add_path ~/.local/bin/
+fish_add_path ~/.nix-profile/bin/
 
 direnv hook fish | source
 zoxide init fish --cmd cd | source

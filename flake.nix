@@ -37,6 +37,7 @@
 
             gnused
             util-linux
+            coreutils
             python3.10
             pre-commit
 
