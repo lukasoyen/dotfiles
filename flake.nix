@@ -53,6 +53,8 @@
             zoxide
 
             bazelisk
+            buildifier
+            starpls
             commitizen
             hyperfine
             pre-commit
