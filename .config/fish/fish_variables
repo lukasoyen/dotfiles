@@ -47,4 +47,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/lukas/\x2enix\x2dprofile/bin\x1e/Users/lukas/\x2elocal/bin
+SETUVAR fish_user_paths:/home/ubuntu/\x2enix\x2dprofile/bin\x1e/home/ubuntu/\x2elocal/bin\x1e/Users/lukas/\x2enix\x2dprofile/bin\x1e/Users/lukas/\x2elocal/bin
