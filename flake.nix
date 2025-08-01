@@ -11,6 +11,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
+        lib = pkgs.lib;
       in {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
         #
@@ -68,6 +69,8 @@
             nix
             nixfmt
             cacert
+          ] ++ lib.optionals pkgs.stdenv.isDarwin [
+            skhd
           ];
         };
       });
