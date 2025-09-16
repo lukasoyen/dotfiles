@@ -1,3 +1,14 @@
 #!/bin/bash
 
-exec bazelisk "$@"
+if command -v bazelisk >/dev/null 2>&1; then
+    exec bazelisk "$@"
+else
+    MODIFIED_PATH=$(echo "$PATH" | tr ':' '\n' | grep -v '\.local/bin' | tr '\n' ':' | sed 's/:$//')
+    
+    if PATH="$MODIFIED_PATH" command -v bazel >/dev/null 2>&1; then
+        PATH="$MODIFIED_PATH" exec bazel "$@"
+    else
+        echo "Error: Neither bazelisk nor bazel found in PATH (excluding .local/bin)" >&2
+        exit 1
+    fi
+fi
