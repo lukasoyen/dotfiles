@@ -11,6 +11,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     
     echo "$(which fish)" | sudo tee -a /etc/shells
     sudo chsh -s $(which fish) $USER
+
+    mkdir -p ~/.config
     
     stow --target ~/ .
     stow --target ~/ macos
@@ -24,6 +26,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     
     echo "$(which fish)" | sudo tee -a /etc/shells
     sudo chsh -s $(which fish) $USER
+
+    mkdir -p ~/.config
     
     stow --target ~/ .
     
