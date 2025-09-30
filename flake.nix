@@ -31,8 +31,6 @@
           # Specifies things to pin in the flake registry and in NIX_PATH.
           pinned = { nixpkgs = toString nixpkgs; };
           paths = with pkgs; [
-            coreutils
-            gnused
             tree
             moreutils
             util-linux
@@ -41,7 +39,6 @@
             fish
             stow
 
-            gh
             git
             git-absorb
             git-lfs
@@ -50,7 +47,6 @@
             fzf
             neovim
             ripgrep
-            tmux
             zoxide
 
             bazelisk
@@ -66,11 +62,18 @@
             tailscale
             trayscale
 
+            localsend
+
             nix
             nixfmt
             cacert
           ] ++ lib.optionals pkgs.stdenv.isDarwin [
+            coreutils
+            gnused
+
             skhd
+            yabai
+            karabiner-elements
           ];
         };
       });
