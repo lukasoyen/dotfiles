@@ -1,0 +1,32 @@
+{
+    "window.commandCenter": true,
+    "git.autofetch": true,
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "vim.leader": " ",
+    "vim.vimrc.enable": true,
+    "vim.visualstar": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 13,
+    "workbench.editor.enablePreview": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "git.blame.editorDecoration.enabled": false,
+    "explorer.confirmDelete": false,
+    "bazel.buildifierFixOnFormat": true,
+    "bazel.lsp.command": "starpls",
+    "bazel.lsp.args": [
+      "server",
+      "--experimental_infer_ctx_attributes",
+      "--experimental_use_code_flow_analysis",
+      "--experimental_enable_label_completions"
+    ],
+    "remote.SSH.remotePlatform": {
+      "devbox": "linux"
+    },
+    "bazel.enableCodeLens": true,
+    "cursorpyright.shouldImportPylanceSettings": "never",
+    "remote.autoForwardPortsSource": "hybrid",
+    "terminal.integrated.fontSize": 15,
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    //"dotfiles.repository": "https://github.com/lukasoyen/dotfiles.git",
+}
