@@ -71,6 +71,7 @@
             coreutils
             gnused
 
+            iterm2
             skhd
             yabai
             karabiner-elements
