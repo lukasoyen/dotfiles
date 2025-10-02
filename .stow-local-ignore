@@ -3,6 +3,7 @@ packages.txt
 bundles
 macos
 
+install.sh
 flake.nix
 flake.lock
 
