@@ -1,2 +1,20 @@
-# open terminal, blazingly fast compared to iTerm/Hyper
-ctrl - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+cmd - u: yabai -m space --focus org
+cmd - i: yabai -m space --focus code
+cmd - a: yabai -m space --focus terminal
+cmd - e: yabai -m space --focus misc
+cmd - n: yabai -m space --focus web
+cmd - r: yabai -m space --focus mail
+
+cmd + shift - u: yabai -m window --space org; yabai -m space --focus org
+cmd + shift - i: yabai -m window --space code; yabai -m space --focus code
+cmd + shift - a: yabai -m window --space terminal; yabai -m space --focus terminal
+cmd + shift - e: yabai -m window --space misc; yabai -m space --focus misc
+cmd + shift - n: yabai -m window --space web; yabai -m space --focus web
+cmd + shift - r: yabai -m window --space mail; yabai -m space --focus mail
+
+cmd - left : yabai -m window --focus west
+cmd - right : yabai -m window --focus east
+cmd + shift - left : yabai -m window --swap west
+cmd + shift - right : yabai -m window --swap east
+
+ctrl - return : ~/.nix-profile/bin/iterm2

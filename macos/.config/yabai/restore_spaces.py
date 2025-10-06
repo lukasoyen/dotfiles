@@ -29,11 +29,18 @@ def rename_spaces(spaces):
         cmd = ("yabai", "-m", "space", str(index), "--label", label)
         subprocess.run(cmd, check=True)
 
+def delete_spaces(spaces):
+    to_destroy = [space["index"] for space in get_spaces() if not space["label"]]
+    for idx in sorted(to_destroy, reverse=True):
+        cmd = ("yabai", "-m", "space", "--destroy", str(idx))
+        subprocess.run(cmd, check=True)
+
 
 def main():
     spaces = sys.argv[1:]
     create_spaces(spaces)
     rename_spaces(spaces)
+    delete_spaces(spaces)
 
 
 if __name__ == "__main__":
