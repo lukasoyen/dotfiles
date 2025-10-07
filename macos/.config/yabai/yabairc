@@ -30,24 +30,33 @@ yabai -m config \
   mouse_action2 resize \
   mouse_drop_action swap
 
-~/.config/yabai/restore_spaces.py org code terminal misc web mail
+~/.config/yabai/restore_spaces.py org code terminal misc web mail calendar chat
 ~/.config/yabai/restore_displays.py
 
-yabai -m rule --add 'app=^Obsidian$' space=org
 yabai -m rule --add 'app=^IntelliJ IDEA$' space=code
 yabai -m rule --add 'app=^Code$' space=code
 yabai -m rule --add 'app=^Cursor$' space=code
+
+yabai -m rule --add 'app=^Obsidian$' space=org
+yabai -m rule --add 'title=.* notes$' space=org
+
 yabai -m rule --add 'app=^wezterm-gui$' space=terminal
 yabai -m rule --add 'app=^iTerm2$' space=terminal
+
+yabai -m rule --add 'app=^GatherV2$' space=misc
+
 yabai -m rule --add 'app=^Google Chrome$' space=web
 yabai -m rule --add 'app=^Gmail$' space=mail
-yabai -m rule --add 'app=^Google Calendar$' space=mail
-yabai -m rule --add 'app=^Slack$' space=web
+yabai -m rule --add 'app=^Google Calendar$' space=calendar
+yabai -m rule --add 'app=^Slack$' space=chat
 
 yabai -m rule --add 'app=^choose$' manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 
-#yabai -m signal --add event=display_added action="~/.yabairc"
-#yabai -m signal --add event=display_removed action="~/.yabairc"
+yabai -m rule --apply
+
+#yabai -m signal --add event=display_added action="~/.config/yabai/restore_displays.py"
+#yabai -m signal --add event=display_removed action="~/.config/yabai/restore_displays.py"
+#yabai -m signal --add event=system_woke action="~/.config/yabai/restore_displays.py"
 
 echo "yabai configuration loaded.."

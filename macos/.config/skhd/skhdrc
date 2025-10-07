@@ -4,6 +4,8 @@ cmd - a: yabai -m space --focus terminal
 cmd - e: yabai -m space --focus misc
 cmd - n: yabai -m space --focus web
 cmd - r: yabai -m space --focus mail
+cmd - t: yabai -m space --focus calendar
+cmd - d: yabai -m space --focus chat
 
 cmd + shift - u: yabai -m window --space org; yabai -m space --focus org
 cmd + shift - i: yabai -m window --space code; yabai -m space --focus code
@@ -11,6 +13,8 @@ cmd + shift - a: yabai -m window --space terminal; yabai -m space --focus termin
 cmd + shift - e: yabai -m window --space misc; yabai -m space --focus misc
 cmd + shift - n: yabai -m window --space web; yabai -m space --focus web
 cmd + shift - r: yabai -m window --space mail; yabai -m space --focus mail
+cmd + shift - t: yabai -m window --space calendar; yabai -m space --focus calendar
+cmd + shift - d: yabai -m window --space chat; yabai -m space --focus chat
 
 cmd - left : yabai -m window --focus west
 cmd - right : yabai -m window --focus east

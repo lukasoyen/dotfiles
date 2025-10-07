@@ -5,9 +5,8 @@ import json
 
 DISPLAYS = {
     # home setup
-    "37D8832A-2D66-02CA-B9F7-8F30A301B230": "mac",
-    "27407BA4-FA8A-4814-91B9-3847E04F3C2F": "right",
-    "D04A9B33-5AF1-4ECC-9F78-716E74706F58": "left",
+    "28B260CC-7929-4455-A14F-8FE705CB73A7": ("org", "code", "terminal", "misc"),
+    "C9C3FD01-BC24-4C6E-9F74-B32E4AFDCC9D": ("web", "calendar", "mail", "chat"),
 }
 
 
@@ -18,12 +17,13 @@ def get_displays():
     )
     return json.loads(completed.stdout)
 
+def get_spaces():
+    cmd = ("yabai", "-m", "query", "--spaces")
+    completed = subprocess.run(
+        cmd, stdout=subprocess.PIPE, encoding="utf-8", check=True
+    )
+    return json.loads(completed.stdout)
 
-def get_display_index(displays, selector):
-    for display in displays:
-        (uuid, index) = (display["uuid"], display["index"])
-        if DISPLAYS.get(uuid) == selector:
-            return index 
 
 def move_to_display(space, index):
     cmd = ("yabai", "-m", "space", space, "--display", str(index))
@@ -32,29 +32,14 @@ def move_to_display(space, index):
 
 def main():
     displays = get_displays()
+    uuid_by_idx = {d["index"]: d["uuid"] for d in displays}
+    uuid_by_space_label = {s["label"]: uuid_by_idx[s["display"]] for s in get_spaces()}
 
-    left_spaces = ("org", "code", "terminal", "misc")
-    right_spaces = ("web", "calendar", "mail", "chat")
-
-    mac_index = get_display_index(displays, "mac")
-    left_index = get_display_index(displays, "left")
-    right_index = get_display_index(displays, "right")
-
-    if left_index is not None and right_index is not None:
-        if mac_index is not None:
-            for space in ("misc",):
-                move_to_display(space, mac_index)
-            for space in ("org", "code", "terminal"):
-                move_to_display(space, left_index)
-        else:
-            for space in left_spaces:
-                move_to_display(space, left_index)
-        for space in right_spaces:
-            move_to_display(space, right_index)
-    else:
-        for space in left_spaces + right_spaces:
-            move_to_display(space, mac_index)
-
+    for (index, uuid) in uuid_by_idx.items():
+        for space in DISPLAYS.get(uuid, ()):
+            print(space, uuid_by_space_label[space], uuid)
+            if uuid_by_space_label[space] != uuid:
+                move_to_display(space, index)
 
 if __name__ == "__main__":
     main()
