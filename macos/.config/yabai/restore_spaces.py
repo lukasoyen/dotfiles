@@ -37,7 +37,7 @@ def delete_spaces(spaces):
 
 
 def main():
-    spaces = sys.argv[1:]
+    spaces = ("org", "code", "terminal", "misc", "web", "mail", "calendar", "chat")
     create_spaces(spaces)
     rename_spaces(spaces)
     delete_spaces(spaces)
